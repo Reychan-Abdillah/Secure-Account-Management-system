@@ -1,55 +1,56 @@
 # Secure Account Management System
 
-Backend system for managing user accounts securely with authentication,
-authorization, and audit logging.
+## Purpose
+Sistem backend untuk mengelola akun pengguna secara aman
+(register, login, view profile, logout, reset password, change email).
 
 ## Tech Stack
 - Node.js
 - Express.js
 - MongoDB
-- JWT (Access & Refresh Token)
-- Jest & Supertest
+- JWT Authentication
+
+## Core Features
+- User registration
+- Login & Logout
+- JWT access & refresh token
+- Password reset via email
+- Account security
+
+
+Backend system for managing user authentication and account security.
 
 ## Features
-- Authentication (register, login, logout)
-- Secure token handling
-- Account management
-- Audit logging
-- Full test coverage
-
-## Installation
-```bash
-npm install
-cp .env.example .env
-npm run dev
+- User registration
+- Login & Logout
+- JWT authentication
+- Password reset
+- Email change
 
 
 
-## Purpose
-This document describes the backend architecture of the Secure Account
-Management System.
 
-## Architecture Pattern
-The project uses a layered architecture:
-- Routes
-- Controllers
-- Services
-- Repositories
-- Database
+## Getting Started
 
-## Request Flow
-Client → Route → Middleware → Controller → Service → Repository → Database
+1. Clone repository
+2. Install dependencies
+   npm install
+3. Setup environment variables
+4. Run server
+   npm run dev
 
-## Folder Structure
-src/
-- routes: API routes
-- controllers: HTTP request handlers
-- services: business logic
-- repositories: database access
-- middlewares: auth, error handler
-- utils: helper functions
 
-## Rules
-- Routes must not contain business logic
-- Controllers must not access database directly
-- Services must be independent of Express
+## Documentation
+- docs/overview.md
+- docs/architecture.md
+- docs/api-spec.md
+- docs/auth-flow.md
+
+
+## Environment Variables
+JWT_SECRET=
+DATABASE_URL=
+
+
+
+
