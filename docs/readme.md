@@ -1,56 +1,57 @@
 # Secure Account Management System
 
 ## Purpose
-Sistem backend untuk mengelola akun pengguna secara aman
-(register, login, view profile, logout, reset password, change email).
+
+A backend system for managing user authentication and account security,
+including registration, login, logout, and token-based authentication.
 
 ## Tech Stack
+
 - Node.js
 - Express.js
 - MongoDB
-- JWT Authentication
+- JWT (Access & Refresh Tokens)
 
 ## Core Features
+
 - User registration
 - Login & Logout
-- JWT access & refresh token
-- Password reset via email
-- Account security
-
-
-Backend system for managing user authentication and account security.
-
-## Features
-- User registration
-- Login & Logout
-- JWT authentication
-- Password reset
-- Email change
-
-
-
+- JWT-based authentication
+- Access & refresh token strategy
+- Secure password hashing
 
 ## Getting Started
 
-1. Clone repository
+1. Clone the repository
 2. Install dependencies
+   ```bash
    npm install
-3. Setup environment variables
-4. Run server
-   npm run dev
+   ```
+3. Configure environment variables
 
+4. Run the development server
+
+npm run dev
 
 ## Documentation
-- docs/overview.md
-- docs/architecture.md
-- docs/api-spec.md
-- docs/auth-flow.md
 
+Main documentation is located in the `docs/` directory.
+
+- Architecture Overview → docs/architecture.md
+- API Specification → docs/api-spec.md
+- Authentication Flow → docs/auth-flow.md
+- Database Schema → docs/database-schema.md
+- Security Practices → docs/security.md
+- Testing Strategy → docs/testing.md
 
 ## Environment Variables
-JWT_SECRET=
-DATABASE_URL=
 
+⚠️ Never commit your real .env file to GitHub.
+Use .env.example instead.
 
-
-
+The following environment variables are required to run the application:
+PORT=3000
+JWT_SECRET=your_access_token_secret  
+JWT_REFRESH_SECRET=your_refresh_token_secret  
+DATABASE_URL=your_database_connection_string  
+NODE_ENV=development | production

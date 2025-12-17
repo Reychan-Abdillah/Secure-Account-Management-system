@@ -10,25 +10,42 @@ backend/
  ├─ repositories/
  ├─ models/
  ├─ middlewares/
- └─ tests/
+ ├─ tests/
+ └─ validators/
+
 
 
 ## Layered Architecture
 Request
-→ Route
-→ Controller
-→ Service
-→ Repository
-→ Database
+→ Routes
+→ Validator
+→ Middlewares (validate)
+→ Controllers
+→ Services
+→ Repositories
+→ Db (Database)
 
-Route: mendefinisikan endpoint dan middleware  
-Controller: menangani HTTP request & response  
-Service: berisi business logic aplikasi  
-Repository: abstraksi akses database  
-Model: definisi schema dan struktur data  
-Middleware: validasi, autentikasi, error handling  
 
-## Why Service Layer?
-- Logic tidak bercampur dengan HTTP
-- Mudah diuji dengan unit testing
-- Mudah dikembangkan dan dirawat
+Routes:
+Defines API endpoints and attaches validators and middlewares.
+
+Validator:
+Handles request input validation (body, params, query).
+Ensures data correctness before reaching the business logic layer.
+
+Middlewares:
+Handles cross-cutting concerns such as authentication, authorization, and error handling.
+
+Controllers:
+Handles HTTP requests and responses.
+Acts as a thin layer that delegates business logic to services.
+
+Services:
+Contains core business logic such as authentication, password hashing, token generation, 
+and domain rules.
+
+Repositories:
+Abstracts database access and data persistence logic.
+
+Models:
+Defines database schemas and data structures
