@@ -12,6 +12,7 @@ import {
 } from "../validators/authValidator.js";
 import { validate } from "../middlewares/validate.js";
 import authMiddleware from "../middlewares/authMiddleware.js";
+import updatePasswordLimiter  from "../middlewares/rateLimiter.js"
 
 const router = express.Router();
 
@@ -19,5 +20,5 @@ router.post("/register", registerValidator, validate, register);
 router.post("/login", loginValidator, validate, login);
 router.post("/logout", logout);
 router.post("/refresh", refresh);
-router.post("/update-password",authMiddleware, updatePassword )
+router.post("/update-password",authMiddleware, updatePasswordLimiter, updatePassword )
 export default router;

@@ -12,4 +12,4 @@
 
 
 - Email must be unique
-- Password is hashed using bcrypt
+

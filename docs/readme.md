@@ -42,7 +42,7 @@ Main documentation is located in the `docs/` directory.
 - Authentication Flow → docs/auth-flow.md
 - Database Schema → docs/database-schema.md
 - Security Practices → docs/security.md
-- Testing Strategy → docs/testing.md
+- Testing → docs/testing.md
 
 ## Environment Variables
 

@@ -1,9 +1,9 @@
 # Security
 
-- Password hashing (bcrypt) ✅
-- JWT expiration ✅
-- Rate limiting
-- Input validation ✅
+- Password hashing (bcrypt) 
+- JWT expiration 
+- Rate limiting 
+- Input validation 
 
 
 ### Refresh Token Scope

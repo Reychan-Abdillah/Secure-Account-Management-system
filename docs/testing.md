@@ -1,13 +1,28 @@
 # Testing Strategy
 
-## Unit Testing
-- Service layer
-- Validation logic
+- Manual testing using Postman or other HTTP client tools.
 
-## Integration Testing
-- Auth API
-- Token verification
 
-Tools:
-- Jest / Mocha
-- Supertest
+backennd/
+controller
+db
+middlewares
+models 
+repositories
+router
+service
+utils
+validators
+app.js
+server.js
+
+docs/
+api-spec
+architecture
+auth-flow
+database-schema
+readme
+security
+testing
+
+public(frontend)

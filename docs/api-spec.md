@@ -6,6 +6,7 @@
 - POST /api/auth/login
 - POST /api/auth/logout
 - POST /api/auth/refresh
+- POST /api/auth/update-password
 
 ---
 
@@ -216,5 +217,47 @@ Returned when an unexpected server error occurs.
 ```json
 {
   "message": "internal server error"
+}
+```
+
+---
+
+### POST /api/auth/update-password
+
+Authorization: Bearer <accessToken>
+Content-Type: application/json
+
+### Response 400 Bad Request
+
+### Description
+
+return when old password or new password is empty
+
+```json
+{
+  "message": "Old and new password are required"
+}
+```
+
+### Description
+
+return when new password is less than 6 characters
+
+```json
+{
+  "message": "New password must be at least 6 characters"
+}
+```
+
+
+### Response error.statusCode || 500
+### Description 
+
+
+### Response 200 Ok
+
+```json
+{
+  "message": "Password updated successfully"
 }
 ```

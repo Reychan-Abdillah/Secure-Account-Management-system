@@ -1,8 +1,9 @@
 # Architecture
+This architecture ensures that business logic is isolated from HTTP and database layers.
+
 
 ## Project Structure
 backend/
- ├─ app.js
  ├─ server.js
  ├─ routes/
  ├─ controllers/
@@ -10,16 +11,13 @@ backend/
  ├─ repositories/
  ├─ models/
  ├─ middlewares/
- ├─ tests/
  └─ validators/
-
 
 
 ## Layered Architecture
 Request
 → Routes
-→ Validator
-→ Middlewares (validate)
+→ Middlewares (auth, rate limit, validation)
 → Controllers
 → Services
 → Repositories
@@ -30,11 +28,13 @@ Routes:
 Defines API endpoints and attaches validators and middlewares.
 
 Validator:
-Handles request input validation (body, params, query).
+Handles request input validation
 Ensures data correctness before reaching the business logic layer.
+
 
 Middlewares:
 Handles cross-cutting concerns such as authentication, authorization, and error handling.
+
 
 Controllers:
 Handles HTTP requests and responses.
