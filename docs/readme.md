@@ -50,8 +50,10 @@ Main documentation is located in the `docs/` directory.
 Use .env.example instead.
 
 The following environment variables are required to run the application:
+```json
 PORT=3000
 JWT_SECRET=your_access_token_secret  
 JWT_REFRESH_SECRET=your_refresh_token_secret  
 DATABASE_URL=your_database_connection_string  
 NODE_ENV=development | production
+```
